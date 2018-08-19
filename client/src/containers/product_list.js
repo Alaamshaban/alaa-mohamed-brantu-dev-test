@@ -20,8 +20,9 @@ class productsList extends Component {
     return this.props.productsList.map(product => {
       return (
         <li className="list-group-item" key={product._id}>
-          <span className="pull-xs-right">{product.category.name}</span>
-          <strong>{product.name}</strong>
+          <strong className="col-md-4 pull-xs-right">{product.category.name}</strong>
+          <span className="col-md-8">{product.name}</span>
+          <img src={product.image}/>
         </li>
       );
     });

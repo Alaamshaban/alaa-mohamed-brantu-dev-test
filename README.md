@@ -44,3 +44,9 @@ You can either contact
 * Contact Ahmed Maged  => maged@brantu.com
 * Contact Mohamed Rizk  => Rizk@brantu.com
 ##############################
+
+
+### To see the solution ###
+run server using (node server.js)
+run your localhost (npm start)
+make sure that you are connected to your database

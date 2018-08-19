@@ -32,11 +32,8 @@ class SearchBar extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchProductsByName }, dispatch);
 }
-function mapStateToProps(state) {
-  return { productsList: state.productsList.productsByName };
-}
-//passing null as passing dispathes must be the seconed argument in connect function
+
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(SearchBar);

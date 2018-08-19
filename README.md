@@ -47,6 +47,7 @@ You can either contact
 
 
 ### To see the solution ###
-run server using (node server.js)
+run npm install
+run server using (node server/server.js)
 run your localhost (npm start)
 make sure that you are connected to your database

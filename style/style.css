@@ -1,0 +1,12 @@
+.search-bar{
+    margin :20px;
+    text-align:center;
+}
+.search-bar input {
+    width:75%;
+}
+.no-products{
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+}

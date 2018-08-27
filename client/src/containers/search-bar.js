@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchProductsByName } from "../actions/index";
+import { fetchProducts } from "../actions/index";
 
 class SearchBar extends Component {
   constructor(props) {
@@ -9,12 +10,15 @@ class SearchBar extends Component {
   }
 
   onInputChange(term) {
-    if (term != '') {
+    if (term != "") {
       this.props.fetchProductsByName(term).then(products => {
-        this.setState({ productsList: products.payload.data })
+        this.setState({ productsList: products.payload.data });
+      });
+    } else {
+      this.props.fetchProducts(term).then(products => {
+        this.setState({ productsList: products.payload.data });
       });
     }
-
   }
 
   render() {
@@ -30,7 +34,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchProductsByName }, dispatch);
+  return bindActionCreators({ fetchProductsByName,fetchProducts }, dispatch);
 }
 
 export default connect(

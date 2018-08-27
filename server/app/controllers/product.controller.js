@@ -63,7 +63,7 @@ exports.findOne = (req, res) => {
 
 // Find a single product with a productName
 exports.findOneByName = (req, res) => {
-    Product.find({ name: { $regex:   req.params.name  } })
+    Product.find({ name:   { $regex:  req.params.name, $options: 'i' }  })
         .then(product => {
             if (!product) {
                 return res.status(404).send({
